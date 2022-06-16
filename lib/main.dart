@@ -5,18 +5,15 @@ import 'package:counter/counter.dart';
 
 void main() {
   runApp(
-    MultiProvider(
-      providers: [
-        ChangeNotifierProvider(create: (_) => Count()),
-      ],
-      child: const MyApp(),
-    ),
+    ChangeNotifierProvider(
+  create: (_) => Count(),
+  child: MyApp(),
+)
   );
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
+  
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
